@@ -15,3 +15,5 @@ io.on('connection', function(socket){
 http.listen(process.env.PORT || 3000, function(){
   console.log('listening on http.address().port');
 });
+
+app.use(express.static(__dirname + '/js'));
