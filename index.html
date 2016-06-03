@@ -27,6 +27,7 @@
     <script>
       var socket = io();
       $('form').submit(function(){
+        debugger;
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
         return false;
