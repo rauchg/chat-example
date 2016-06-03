@@ -4,6 +4,7 @@ var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/js/jquery-1.11.1.js');
 });
 
 io.on('connection', function(socket){
@@ -16,4 +17,3 @@ http.listen(process.env.PORT || 3000, function(){
   console.log('listening on http.address().port');
 });
 
-app.use(express.static(__dirname + '/js'));
